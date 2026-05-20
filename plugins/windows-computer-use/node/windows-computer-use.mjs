@@ -63,7 +63,7 @@ function winScript(body) {
 function listWindowsPayload(args = {}) {
   const query = String(args.query ?? "").toLowerCase();
   const limit = Number(args.limit ?? 30);
-  return runPowerShell(winScript(`
+  const result = runPowerShell(winScript(`
 $query = ${psString(query)}
 $active = [WCUWin32]::GetForegroundWindow()
 $items = New-Object System.Collections.Generic.List[object]
@@ -89,6 +89,7 @@ $items = New-Object System.Collections.Generic.List[object]
 }, [IntPtr]::Zero) | Out-Null
 $items | Select-Object -First ${limit} | ConvertTo-Json -Compress
 `)) ?? [];
+  return Array.isArray(result) ? result : [result];
 }
 
 function activeWindowPayload() {
