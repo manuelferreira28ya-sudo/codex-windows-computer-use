@@ -1,9 +1,10 @@
 {
   "mcpServers": {
     "windows-computer-use": {
-      "command": "python",
+      "command": "npx",
       "args": [
-        "scripts/windows_computer_use_mcp.py"
+        "-y",
+        "github:manuelferreira28ya-sudo/codex-windows-computer-use"
       ]
     }
   }

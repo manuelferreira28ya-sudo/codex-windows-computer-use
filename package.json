@@ -1,0 +1,28 @@
+{
+  "name": "codex-windows-computer-use",
+  "version": "0.1.0",
+  "description": "Windows Computer Use MCP server and Codex plugin runtime.",
+  "type": "module",
+  "bin": {
+    "codex-windows-computer-use": "./plugins/windows-computer-use/node/windows-computer-use.mjs"
+  },
+  "files": [
+    "plugins/windows-computer-use/node/",
+    "plugins/windows-computer-use/.codex-plugin/",
+    "plugins/windows-computer-use/skills/",
+    "plugins/windows-computer-use/.mcp.json",
+    ".agents/plugins/marketplace.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "codex",
+    "mcp",
+    "windows",
+    "computer-use",
+    "automation",
+    "ocr",
+    "uiautomation"
+  ],
+  "license": "MIT"
+}

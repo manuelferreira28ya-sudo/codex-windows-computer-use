@@ -22,14 +22,17 @@ This is not the official OpenAI Computer Use plugin. It is a community/local Win
 
 - Windows
 - Codex Desktop with local plugins enabled
-- Python 3.10+
-- Python packages:
-  - `Pillow`
-  - `pytesseract`
+- Node.js 20+
 - Optional but recommended:
   - Tesseract OCR for Windows
+- Optional Python fallback:
+  - Python 3.10+
+  - `Pillow`
+  - `pytesseract`
 
-Install Python dependencies:
+The public MCP runtime is Node-based and can run through `npx`.
+
+For the Python fallback runtime, install:
 
 ```powershell
 python -m pip install -r plugins/windows-computer-use/requirements.txt
@@ -65,6 +68,36 @@ enabled = true
 ```
 
 Then restart Codex Desktop.
+
+The plugin MCP config uses `npx` with the GitHub repo:
+
+```json
+{
+  "command": "npx",
+  "args": ["-y", "github:manuelferreira28ya-sudo/codex-windows-computer-use"]
+}
+```
+
+After this package is published to npm, this can become:
+
+```json
+{
+  "command": "npx",
+  "args": ["-y", "codex-windows-computer-use"]
+}
+```
+
+For local development before npm publication, run from the repo root:
+
+```powershell
+node .\plugins\windows-computer-use\node\windows-computer-use.mjs
+```
+
+The previous Python runtime remains in:
+
+```text
+plugins/windows-computer-use/scripts/windows_computer_use_mcp.py
+```
 
 ## Safety
 
