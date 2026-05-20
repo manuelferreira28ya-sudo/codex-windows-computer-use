@@ -1,0 +1,36 @@
+{
+  "name": "windows-computer-use",
+  "version": "0.5.1",
+  "description": "Local Windows desktop automation tools for Codex. Provides observe/act loops, fast screenshots, OCR, UI Automation controls, hwnd window control, app switching, batched mouse and keyboard actions, scroll, drag, and waits through a local MCP server.",
+  "author": {
+    "name": "Windows Computer Use contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "windows",
+    "computer-use",
+    "automation",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Windows Computer Use",
+    "shortDescription": "Control Windows mouse and keyboard locally",
+    "longDescription": "Windows Computer Use exposes a small local MCP server for observe/act_and_observe loops, fast screenshots, OCR-assisted click_text/find_text/wait_for_text, Windows UI Automation controls, hwnd-based window control, app switching, mouse movement, clicks, scroll, drag, keyboard input, hotkeys, batched actions, and waits. It is a community/local approximation of desktop computer use for Windows, not the official OpenAI Computer Use plugin.",
+    "developerName": "Windows Computer Use contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Take a screenshot and tell me what is visible.",
+      "Click this Windows app button for me.",
+      "Type this into the focused Windows app."
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}
